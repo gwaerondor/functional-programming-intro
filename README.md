@@ -11,5 +11,6 @@ You can try everything out for yourself:
 ```bash
 docker run -it --rm haskell:9
 ```
-## Let's begin
-Without further ado, move on to [chapter 1](01-purity.md).
+## Chapters
+[01 - Purity](01-purity/01-purity.md)
+[02 - First-class citizenship](02-first-class/02-first-class.md)
