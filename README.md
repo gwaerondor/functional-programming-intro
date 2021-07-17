@@ -15,3 +15,5 @@ docker run -it --rm haskell:9
 [01 - Purity](01-purity/01-purity.md)
 
 [02 - First-class citizenship](02-first-class/02-first-class.md)
+
+[03 - Control flow abstraction](03-control-flow-abstraction/03-control-flow-abstraction.md)
