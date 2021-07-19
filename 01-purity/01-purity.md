@@ -35,13 +35,15 @@ from the above understanding of purity. There are ways to represent state in
 a functional program.
 
 ### Monads
-Instead of having a program do an impure action, the program can instead
-return the _promise_ of an impure computation. This keeps the language itself
-pure, but allows impure actions to happen anyway.
+Haskell is a pure functional programming language. Haskell solves several
+impurity problems with the use of _monads_. A monad is a way to represent a
+computation, and it is very prevalent everywhere in Haskell. Instead of having a
+program do an impure action, the program can instead return the _promise_ of an
+impure computation. This keeps the language itself pure, but allows for impure
+actions to happen anyway.
 
-Haskell is a pure functional programming language, and the way Haskell solves
-the I/O impurity problem is with the `IO` _monad_. A monad is a way to represent
-a computation, and it is very prevalent everywhere in Haskell, not just for I/O.
+#### The `IO` monad
+The I/O impurity problem is solved with the `IO` monad.
 
 The `IO` module does _not_ perform I/O. It returns I/O actions, that _describe_
 an I/O operation that needs to be performed. The `IO` type is completely pure,
@@ -49,6 +51,9 @@ it has no side effects, and thus the I/O operations have been separated from
 the language itself. These `IO` types can be bound and chained in ways that
 handle all the IO of a single program, and redirects the output to the `main`
 function of the program, which always has the return type `IO ()`.
+
+#### The `State` monad
+...
 
 ### _Impurity_
 Not that many functional programming languages actually aspire to be pure.
@@ -75,6 +80,8 @@ a function be either pure, or _only_ used for its side-effects, not both.
 
 ### Loops
 ```erlang
-loop(State) ->
-    loop(do_something(State)).
+loop(ListeningSocket, State) ->
+    {ok, Socket} = gen_tcp:listen(ListeningSocket),
+    UpdatedState = handle_connection(Socket),
+    loop(ListeningSocket, UpdatedState).
 ```
