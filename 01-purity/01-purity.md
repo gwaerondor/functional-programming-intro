@@ -82,6 +82,6 @@ a function be either pure, or _only_ used for its side-effects, not both.
 ```erlang
 loop(ListeningSocket, State) ->
     {ok, Socket} = gen_tcp:listen(ListeningSocket),
-    UpdatedState = handle_connection(Socket),
+    UpdatedState = handle_connection(Socket, State),
     loop(ListeningSocket, UpdatedState).
 ```
