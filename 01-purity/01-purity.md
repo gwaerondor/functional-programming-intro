@@ -16,28 +16,42 @@ the output is also the same. The implications of this are:
 If a program doesn't have a state and cannot modify a state, that means it's not
 possible to:
 
-* Read a file
-* Write a file
-* Open a TCP connection
+* Read or write a file
+* Open a socket
 * Write to the terminal
+* Read user input
 * Generate a random number
 * Change the value of a "reference"
 
 This trips many people up. The idea of functional purity and that you are not
 even allowed to make a program that reads files or accesses databases makes many
 dismiss functional programming entirely as something that's "purely academical,
-and not at all useful in practical applications".
+and not at all useful in real-life practical applications".
 
 ## Representing state
 There are many programs written in functional languages that obviously do
 real and practical tasks such as accessing databases, so something is missing
 from the above understanding of purity. There are ways to represent state in
-a purely functional program.
+a functional program.
 
 ### Monads
+Instead of having a program do an impure action, the program can instead
+return the _promise_ of an impure computation. This keeps the language itself
+pure, but allows impure actions to happen anyway.
 
-### _Optional_ purity
-Not that many functional programming languages actually pretend to be pure.
+Haskell is a pure functional programming language, and the way Haskell solves
+the I/O impurity problem is with the `IO` _monad_. A monad is a way to represent
+a computation, and it is very prevalent everywhere in Haskell, not just for I/O.
+
+The `IO` module does _not_ perform I/O. It returns I/O actions, that _describe_
+an I/O operation that needs to be performed. The `IO` type is completely pure,
+it has no side effects, and thus the I/O operations have been separated from
+the language itself. These `IO` types can be bound and chained in ways that
+handle all the IO of a single program, and redirects the output to the `main`
+function of the program, which always has the return type `IO ()`.
+
+### _Impurity_
+Not that many functional programming languages actually aspire to be pure.
 In that case, impure functionality such as writing a file is just as simple
 in functional programming as in any other paradigm. It is up to the programmer
 to ensure that functions that should be pure are pure. It is desirable to have

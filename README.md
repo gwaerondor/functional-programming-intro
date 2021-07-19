@@ -16,7 +16,7 @@ You can try everything out for yourself:
 docker run -it --rm haskell:9
 ```
 ## Chapters
-[01 - Purity](01-purity/01-purity.md)
+[01- Purity](01-purity/01-purity.md)
 
 [02 - First-class citizenship](02-first-class/02-first-class.md)
 
