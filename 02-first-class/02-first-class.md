@@ -22,7 +22,7 @@ or `Failure`, and we need to modify a counter depending on the result.
 Here's one way we could do it.
 
 ```haskell
-type Result = Success | Failure
+data Result = Success | Failure
 
 countAction :: Result -> (Int -> Int)
 countAction Success = incrementer
