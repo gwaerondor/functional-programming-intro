@@ -104,3 +104,6 @@ The function recursively calls itself, using the new state as an argument.
 
 Other processes might be able to access the state from elsewhere in the code,
 or `handle_connection` might even update a database when the state changes.
+
+## Next chapter
+[Chapter 02: First-class citizenship](../02-first-class/02-first-class.md)
