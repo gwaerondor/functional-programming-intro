@@ -16,8 +16,10 @@ You can try everything out for yourself:
 docker run -it --rm haskell:9
 ```
 ## Chapters
-[01- Purity](01-purity/01-purity.md)
+[01 - Intro](01-intro/01-intro.md)
 
-[02 - First-class citizenship](02-first-class/02-first-class.md)
+[02- Purity](02-purity/02-purity.md)
 
-[03 - Control flow abstraction](03-control-flow-abstraction/03-control-flow-abstraction.md)
+[03 - First-class citizenship](03-first-class/03-first-class.md)
+
+[04 - Control flow abstraction](04-control-flow-abstraction/04-control-flow-abstraction.md)
