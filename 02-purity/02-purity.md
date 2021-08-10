@@ -1,4 +1,4 @@
-# Chapter 1: Purity
+# Chapter 02: Purity
 When describing what functional programming is, the topic of _purity_ often
 comes up. The meaning of functional purity can be summarized like this:
 
@@ -106,4 +106,4 @@ Other processes might be able to access the state from elsewhere in the code,
 or `handle_connection` might even update a database when the state changes.
 
 ## Next chapter
-[Chapter 02: First-class citizenship](../02-first-class/02-first-class.md)
+[Chapter 03: First-class citizenship](../03-first-class/03-first-class.md)

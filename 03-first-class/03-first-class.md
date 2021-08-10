@@ -1,4 +1,4 @@
-# Chapter 2: First-class citizenship
+# Chapter 03: First-class citizenship
 Apart from [purity](../01-purity/01-purity.md), which as we saw can be optional,
 another important aspect of functional programming is the fact that functions
 are _first-class citizens_.
@@ -41,4 +41,4 @@ A few things happens here:
 * The function contained in `count` is invoked with the `counter` argument.
 
 ## Next chapter
-[Chapter 03: Control flow abstraction](../03-control-flow-abstraction/03-control-flow-abstraction.md)
+[Chapter 04: Control flow abstraction](../04-control-flow-abstraction/04-control-flow-abstraction.md)

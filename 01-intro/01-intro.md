@@ -1,4 +1,4 @@
-# Chapter 1: Intro
+# Chapter 01: Intro
 This chapter introduces some very basic Haskell syntax, just to make it easier
 to understand the rest of the course. Don't worry -- this is just so that we
 have a language to express some ideas in. Most likely you can skip this intro
@@ -103,5 +103,9 @@ We can see the type of an unprintable value with `:type`, like this:
 Prelude> :type filter
 filter :: (a -> Bool) -> [a] -> [a]
 ```
-In the future, the form of Haskell code that would be used in a compilable
-file of Haskell source code is used, so add your own `:{ ... :}` when needed.
+In the coming chapters, the form of Haskell code that would be used in a
+compilable file of Haskell source code is used, so add your own `:{ ... :}`
+when needed.
+
+## Next chapter
+[Chapter 02: Purity](../02-purity/02-purity.md)
