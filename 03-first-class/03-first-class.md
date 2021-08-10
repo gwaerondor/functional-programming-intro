@@ -1,5 +1,5 @@
 # Chapter 03: First-class citizenship
-Apart from [purity](../01-purity/01-purity.md), which as we saw can be optional,
+Apart from [purity](../02-purity/02-purity.md), which as we saw can be optional,
 another important aspect of functional programming is the fact that functions
 are _first-class citizens_.
 
